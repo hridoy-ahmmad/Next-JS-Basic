@@ -58,7 +58,7 @@ export default function Header() {
             </span>
 
             <span className="bg-linear-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-[21px] font-bold tracking-tight text-transparent">
-              Website
+              Soft
             </span>
 
             <span className="ml-1.5 -mt-2.5 rounded-full bg-blue-50 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-blue-600">
