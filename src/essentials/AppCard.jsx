@@ -78,7 +78,7 @@ const AppCard = ({ app }) => {
                 {/* Install Button */}
                 <button
                     type="button"
-                    className="flex-1 rounded-xl bg-blue-600 px-3 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/20"
+                    className="flex-1 rounded-xl bg-linear-to-br from-blue-600 via-indigo-600 to-violet-600 shadow-lg px-3 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-linear-to-bl hover:shadow-lg hover:shadow-blue-500/20"
                 >
                     Install
                 </button>

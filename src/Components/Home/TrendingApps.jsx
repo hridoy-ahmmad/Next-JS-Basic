@@ -1,4 +1,5 @@
 import AppCard from '@/essentials/AppCard';
+import Link from 'next/link';
 import React from 'react';
 
 const appsPromise = async () => {
@@ -43,6 +44,14 @@ const TrendingApps = async () => {
                 {apps
                     .slice(0, 6)
                     .map((app, index) => <AppCard key={index} app={app} />)}
+            </div>
+            <div className="mt-8 flex justify-center">
+                <Link
+                    href="/apps"
+                    className="rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
+                >
+                    View All Apps
+                </Link>
             </div>
         </div>
     );

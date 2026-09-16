@@ -2,14 +2,21 @@ import Image from 'next/image';
 import React from 'react';
 
 
-export const metadata = {
-    title: 'Apps Details 🥹',
-    description: 'very good apps vai.Please Download🥹'
-}
+
 
 const appsPromise = async () => {
     const res = await fetch('http://localhost:3000/data.json')
     return res.json()
+}
+
+export const generateMetadata = async ({params}) => {
+    const apps = await appsPromise()
+    const { slug } = await params
+    // console.log('id is=', id.slug);
+    const app = apps.find(app => app.id == slug)
+    return {
+        title: `${ app.title }`
+}
 }
 
 const AppsDetails = async ({ params }) => {
@@ -17,7 +24,7 @@ const AppsDetails = async ({ params }) => {
     const { slug } = await params
     // console.log('id is=', id.slug);
     const app = apps.find(app => app.id == slug)
-    console.log(app);
+    // console.log(app);
 
 
     const totalRatings = app.ratings.reduce((acc, rating) => {

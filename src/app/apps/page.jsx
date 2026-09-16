@@ -1,5 +1,9 @@
 import AppCard from '@/essentials/AppCard';
 import React from 'react';
+export const metadata = {
+  title: "All Apps",
+  description: "The best software company",
+};
 
 const appsPromise = async () => {
     const res = await fetch('http://localhost:3000/data.json');
