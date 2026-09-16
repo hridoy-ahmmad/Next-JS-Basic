@@ -1,4 +1,4 @@
-import TrendingAppCard from '@/essentials/TrendingAppCard';
+import AppCard from '@/essentials/AppCard';
 import React from 'react';
 
 const appsPromise = async () => {
@@ -21,7 +21,6 @@ const TrendingApps = async () => {
             <section className="relative overflow-hidden bg-slate-50/50 py-16 sm:py-24 border-t border-slate-100">
                 {/* Subtle Background Glow */}
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-100/40 via-transparent to-transparent" />
-
                 <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="mx-auto max-w-3xl text-center">
 
@@ -37,15 +36,13 @@ const TrendingApps = async () => {
                         <p className="mt-4 text-base text-slate-600 sm:text-lg md:text-xl">
                             Discover our most popular and high-performance tools designed to streamline your workflow and supercharge productivity.
                         </p>
-
                     </div>
                 </div>
             </section>
-
             <div className='grid md:grid-cols-3 lg:grid-cols-3 gap-3 '>
                 {apps
                     .slice(0, 6)
-                    .map((app, index) => <TrendingAppCard key={index} app={app} />)}
+                    .map((app, index) => <AppCard key={index} app={app} />)}
             </div>
         </div>
     );
